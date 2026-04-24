@@ -15,5 +15,29 @@ public interface DishService {
      */
     void saveWithFlavor(DishDTO dishDTO);
 
+    /**
+     * 菜品分页查询
+     * @param dishPageQueryDTO
+     * @return
+     */
+    PageResult pageQuery(DishPageQueryDTO dishPageQueryDTO);
 
+    /**
+     * 批量删除
+     * @param ids
+     */
+    void deleteBatch(List<Long> ids);
+
+    /**
+     * 根据ID查询菜品
+     * @param id
+     * @return
+     */
+    DishVO getByIdWithFlovor(Long id);
+
+    /**
+     *
+     * @param dishDTO
+     */
+    void updateWithFlavor(DishDTO dishDTO);
 }
